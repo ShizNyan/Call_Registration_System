@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Страница</title>
+	<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<div id = "header"><h1>Обратная связь</h1></div>
+	<div id = "content">
+    <form name="post" method="POST" action="/post">
+		<div>Фамилия</div>
+		<input type="text" name="last_name" required="required">
+		<div>Имя</div>
+		<input type="text" name="first_name" required="required">
+		<div>Отчество</div>
+		<input type="text" name="patronymic">
+		<div>Телефон</div>
+		<input type="tel" name="telephone" required="required">
+		<div>Обращение</div>
+		<textarea name="message"></textarea>
+		<div></div>
+		<input type="submit" name="submit_btn" value="Отправить">
+	</form>
+	</div>
+  </body>
+</html>
