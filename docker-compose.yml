@@ -1,0 +1,46 @@
+version: "3.9"
+services:
+
+  backend:
+    image: debian:latest
+    volumes:
+      - D:\git\Call_Registration_System\rabbitmq
+      - D:\git\Call_Registration_System\db
+      - D:\git\Call_Registration_System\frontend
+      - D:\git\Call_Registration_System\backend
+    ports:
+      - "80"
+    depends_on:
+      - db
+      - frontend
+      - rabbitmq
+
+  db:
+    image: mongodb:6.0.3
+    volumes:
+      - D:\git\Call_Registration_System\db
+    networks:
+      - backend
+
+  frontend:
+    image: ???
+    ports:
+      - "80"
+
+  rabbitmq:
+    image: ???
+    ports:
+      - "15672"
+    networks:
+      - backend
+
+  servicedb:
+    image: ???
+    networks:
+      - backend
+    depends_on:
+      - db
+
+networks:
+  frontend:
+  backend:

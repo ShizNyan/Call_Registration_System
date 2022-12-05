@@ -26,7 +26,7 @@ class Application(tornado.web.Application):
  
 class MainHandler(tornado.web.RequestHandler):
     async def get(self):
-        self.render("frontend.html")
+        self.render("D:\git\Call_Registration_System\/frontend\/frontend.html")
 
 class PostHandler(tornado.web.RequestHandler):
     async def post(self):
@@ -40,7 +40,7 @@ class PostHandler(tornado.web.RequestHandler):
 
         db.save_in_db(last_name, name, patronymic, telephone, message)
         
-        self.render("frontend.html")  
+        self.render("D:\git\Call_Registration_System\/frontend\/frontend.html")  
  
  
 def main():
